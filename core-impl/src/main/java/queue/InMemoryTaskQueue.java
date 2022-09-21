@@ -18,16 +18,6 @@ public class InMemoryTaskQueue<T extends IStat> implements TasksQueue<T>  {
         return queue.offer(scheduledTask);
     }
 
-    @Override
-    public ScheduledTask<T> pull() {
-        try {
-            return queue.take();
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-    @Override
     public long size() {
         return queue.size();
     }

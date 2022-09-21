@@ -1,11 +1,13 @@
 package yt.scheduler;
 
+import org.springframework.stereotype.Component;
 import task.ScheduledTask;
 import yt.data.YouTubeStats;
 import yt.executor.YouTubeStatsExecutor;
 import yt.queue.YouTubeStatsTasksQueue;
 import yt.task.DefaultYouTubeStatsTask;
 
+@Component
 public class DefaultYouTubeStatsTaskScheduler implements YouTubeStatsTaskScheduler{
     private final YouTubeStatsTasksQueue queue;
 
