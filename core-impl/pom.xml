@@ -2,19 +2,22 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>personalproject-root</artifactId>
+        <groupId>tech.kirya522</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>tech.kirya522</groupId>
-    <artifactId>personalproject-root</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>api</module>
-        <module>domain-contracts</module>
-        <module>core-contracts</module>
-        <module>domain-impl</module>
-        <module>core-impl</module>
-    </modules>
+    <artifactId>core-impl</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>tech.kirya522</groupId>
+            <artifactId>core-contracts</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

@@ -5,5 +5,5 @@ import task.ScheduledTask;
 
 public interface Scheduler<T extends IStat> {
 
-    void schedule(ScheduledTask<T> task);
+    boolean schedule();
 }
