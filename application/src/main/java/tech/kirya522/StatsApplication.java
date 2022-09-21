@@ -1,14 +1,18 @@
+package tech.kirya522;
+
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.integration.config.EnableIntegration;
-import org.springframework.stereotype.Component;
+import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
-@EnableIntegration
 @SpringBootApplication
-public class Application {
+@EnableScheduling
+@EnableAsync
+public class StatsApplication {
     public static void main(String[] args) {
-        new SpringApplicationBuilder(Application.class)
+        new SpringApplicationBuilder(StatsApplication.class)
                 .web(WebApplicationType.NONE)
                 .run(args);
     }

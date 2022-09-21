@@ -10,10 +10,6 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>application</module>
-        <module>domain-contracts</module>
-        <module>core-contracts</module>
-        <module>domain-impl</module>
-        <module>core-impl</module>
     </modules>
 
     <properties>
